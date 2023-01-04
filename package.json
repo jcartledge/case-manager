@@ -1,0 +1,11 @@
+{
+  "name": "case-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "James Cartledge <jcartledge@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "packageManager": "yarn@3.3.1"
+}

@@ -1,0 +1,8 @@
+fileignoreconfig:
+  - filename: yarn.lock
+    checksum: 77be715ff6c1128b5bff9d9b8a9fcf6b8d009a74009b6941aa14bd47d9509e4d
+    ignore_detectors: []
+  - filename: .yarn/releases/yarn-3.3.1.cjs
+    checksum: 5065a840adcba082ed7bf389f7ef373f284d653bc949ee9472ef154c01fe974a
+    ignore_detectors: []
+scopeconfig: []
