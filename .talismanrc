@@ -1,6 +1,9 @@
 fileignoreconfig:
+  - filename: tsconfig.tsbuildinfo
+    checksum: a16df0ccd211056ca4861d793b9360221cfd061d421bec19da5fee48f78bc7ae
+    ignore_detectors: []
   - filename: yarn.lock
-    checksum: 77be715ff6c1128b5bff9d9b8a9fcf6b8d009a74009b6941aa14bd47d9509e4d
+    checksum: a81dcb63de2a13e010fb8e80ef7c9c45c3f4d8e098cf57f3adcf278532ba1874
     ignore_detectors: []
   - filename: .yarn/releases/yarn-3.3.1.cjs
     checksum: 5065a840adcba082ed7bf389f7ef373f284d653bc949ee9472ef154c01fe974a
