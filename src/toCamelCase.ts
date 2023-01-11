@@ -1,5 +1,5 @@
 export const toCamelCase = (input: string): string => {
-  return lcfirst(input.replace(/_/g, "-").split("-").map(ucfirst).join(""));
+  return lcfirst(input.replace(/[_-]/g, " ").split(" ").map(ucfirst).join(""));
 };
 
 const ucfirst = (input: string): string => {
