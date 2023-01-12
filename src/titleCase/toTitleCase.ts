@@ -1,4 +1,4 @@
-import { ucfirst } from "./util/ucfirst";
+import { ucfirst } from "../util/ucfirst";
 
 export const toTitleCase = (input: string): string => {
   return input
