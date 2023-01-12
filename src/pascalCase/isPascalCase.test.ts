@@ -1,13 +1,8 @@
-import test, { ExecutionContext } from "ava";
+import test from "ava";
+import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { isPascalCase } from "./isPascalCase";
 
-const yes = (t: ExecutionContext) => {
-  t.is(isPascalCase(t.title), true);
-};
-
-const no = (t: ExecutionContext) => {
-  t.is(isPascalCase(t.title), false);
-};
+const { yes, no } = booleanTitleTestHelpers(isPascalCase);
 
 test("IsPascalCase", yes);
 test("isPascalCase", no);
