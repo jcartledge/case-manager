@@ -1,13 +1,8 @@
-import test, { ExecutionContext } from "ava";
+import test from "ava";
+import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { isCamelCase } from "./isCamelCase";
 
-const yes = (t: ExecutionContext) => {
-  t.is(isCamelCase(t.title), true);
-};
-
-const no = (t: ExecutionContext) => {
-  t.is(isCamelCase(t.title), false);
-};
+const { yes, no } = booleanTitleTestHelpers(isCamelCase);
 
 test("isCamelCase", yes);
 test("IsCamelCase", no);
