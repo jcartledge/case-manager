@@ -1,4 +1,4 @@
-import { ucfirst } from "../util/ucfirst";
+import { ucfirst } from "../common/ucfirst";
 
 export const toSentenceCase = (input: string): string => {
   return ucfirst(
