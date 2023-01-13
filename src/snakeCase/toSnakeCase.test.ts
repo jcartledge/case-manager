@@ -1,22 +1,11 @@
 import test from "ava";
+import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { toSnakeCase } from "./toSnakeCase";
 
-test("FromPascalCase", (t) => {
-  t.is(toSnakeCase("FromPascalCase"), "from_pascal_case");
-});
+const { is: isToSnakeCase } = stringTitleTestHelpers(toSnakeCase);
 
-test("from-kebab-case", (t) => {
-  t.is(toSnakeCase("from-kebab-case"), "from_kebab_case");
-});
-
-test("fromCamelCase", (t) => {
-  t.is(toSnakeCase("fromCamelCase"), "from_camel_case");
-});
-
-test("From sentence case", (t) => {
-  t.is(toSnakeCase("From sentence case"), "from_sentence_case");
-});
-
-test("From Title Case", (t) => {
-  t.is(toSnakeCase("From Title Case"), "from_title_case");
-});
+test("FromPascalCase", isToSnakeCase("from_pascal_case"));
+test("from-kebab-case", isToSnakeCase("from_kebab_case"));
+test("fromCamelCase", isToSnakeCase("from_camel_case"));
+test("From sentence case", isToSnakeCase("from_sentence_case"));
+test("From Title Case", isToSnakeCase("from_title_case"));
