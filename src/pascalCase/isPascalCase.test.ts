@@ -5,8 +5,9 @@ import { isPascalCase } from "./isPascalCase";
 const { yes, no } = booleanTitleTestHelpers(isPascalCase);
 
 test("IsPascalCase", yes);
-test("isPascalCase", no);
-test("ISPascalCase", no);
-test("IsPAScalCase", no);
-test("is-pascal_case", no);
+
 test("Is pascal Case", no);
+test("is-pascal_case", no);
+test("isPascalCase", no);
+test("IsPAScalCase", no);
+test("ISPascalCase", no);
