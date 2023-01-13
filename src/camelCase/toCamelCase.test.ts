@@ -1,12 +1,11 @@
-import test, { ExecutionContext } from "ava";
+import test from "ava";
+import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { toCamelCase } from "./toCamelCase";
 
-const is = (expected: string) => (t: ExecutionContext) => {
-  t.is(toCamelCase(t.title), expected);
-};
+const { is: toCamelCaseIs } = stringTitleTestHelpers(toCamelCase);
 
-test("from_snake_case", is("fromSnakeCase"));
-test("from-kebab-case", is("fromKebabCase"));
-test("FromPascalCase", is("fromPascalCase"));
-test("From sentence case", is("fromSentenceCase"));
-test("From Title Case", is("fromTitleCase"));
+test("from_snake_case", toCamelCaseIs("fromSnakeCase"));
+test("from-kebab-case", toCamelCaseIs("fromKebabCase"));
+test("FromPascalCase", toCamelCaseIs("fromPascalCase"));
+test("From sentence case", toCamelCaseIs("fromSentenceCase"));
+test("From Title Case", toCamelCaseIs("fromTitleCase"));
