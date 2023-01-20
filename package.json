@@ -17,6 +17,7 @@
     "eslint": "^8.32.0",
     "rimraf": "^4.1.1",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.23.24",
     "typescript": "^4.9.4"
   },
   "eslintConfig": {
@@ -34,6 +35,7 @@
     "audit": "audit-ci",
     "build": "yarn clean && tsc",
     "clean": "rimraf dist",
+    "docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "test": "ava"
   },
