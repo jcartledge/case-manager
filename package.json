@@ -1,15 +1,21 @@
 {
   "name": "case-manager",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "James Cartledge <jcartledge@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
+    "audit-ci": "^6.6.0",
     "ava": "^5.1.0",
     "eslint": "^8.32.0",
+    "rimraf": "^4.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   },
@@ -25,6 +31,9 @@
     "root": true
   },
   "scripts": {
+    "audit": "audit-ci",
+    "build": "yarn clean && tsc",
+    "clean": "rimraf dist",
     "lint": "eslint src && tsc --noEmit",
     "test": "ava"
   },
