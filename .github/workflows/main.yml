@@ -23,4 +23,4 @@ jobs:
         with:
           node-version: 19
       - name: Build/test/package
-        run: yarn && yarn ci
+        run: yarn && yarn ci-checks
