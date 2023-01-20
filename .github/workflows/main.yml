@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 19
-      - name: Build/test/package
+      - name: Audit package dependencies
         run: yarn && yarn audit
 
   test:
@@ -40,5 +40,20 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 19
-      - name: Build/test/package
+      - name: Lint and unit test
         run: yarn && yarn lint && yarn test
+
+  publish-docs:
+    needs: [commitlint, talisman, audit, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - name: Build docs
+        run: yarn && yarn docs
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
