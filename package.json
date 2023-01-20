@@ -46,6 +46,7 @@
   "scripts": {
     "audit": "audit-ci",
     "build": "yarn clean && tsc",
+    "ci-checks": "yarn audit && yarn lint && yarn test",
     "clean": "rimraf dist",
     "docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
