@@ -46,6 +46,8 @@ jobs:
   publish-docs:
     needs: [commitlint, talisman, audit, test]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -54,6 +56,7 @@ jobs:
       - name: Build docs
         run: yarn && yarn docs
       - uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
