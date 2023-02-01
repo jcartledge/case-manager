@@ -18,30 +18,30 @@ jobs:
   check-deps:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           run_install: true
-      - uses: actions/checkout@v3
       - name: audit-ci
         run: pnpm check-deps
 
   lint:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           run_install: true
-      - uses: actions/checkout@v3
       - name: lint
         run: pnpm lint
 
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           run_install: true
-      - uses: actions/checkout@v3
       - name: test
         run: pnpm coverage
 
@@ -50,11 +50,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+
       - uses: pnpm/action-setup@v2
         with:
           run_install: true
-
-      - uses: actions/checkout@v3
 
       - name: build
         run: pnpm build
@@ -79,11 +79,10 @@ jobs:
           release-type: node
           package-name: "@jcartledge/${{github.event.repository}}"
 
-      - uses: pnpm/action-setup@v2
-        with:
-          run_install: true
-
       - uses: actions/checkout@v3
+        if: ${{steps.release.outputs.release_created}}
+
+      - uses: pnpm/action-setup@v2
         if: ${{steps.release.outputs.release_created}}
 
       - uses: actions/setup-node@v3
