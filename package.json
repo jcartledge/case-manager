@@ -2,8 +2,8 @@
   "name": "@jcartledge/case-manager",
   "version": "1.0.1",
   "repository": "github:jcartledge/case-manager",
-  "description": "Utilities for converting strings between cases.",
-  "homepage": "https://jcartledge.github.io/case-manager/",
+  "description": "Simple conditional component for React.",
+  "homepage": "https://jcartledge.github.io/react-conditional/",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -49,7 +49,7 @@
   },
   "scripts": {
     "check-deps": "audit-ci",
-    "build": "yarn clean && tsc",
+    "build": "pnpm clean && tsc",
     "clean": "rimraf dist",
     "coverage": "c8 ava",
     "docs": "typedoc --out docs src",
@@ -66,5 +66,5 @@
       "ts-node/register"
     ]
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "pnpm@7.26.3"
 }
