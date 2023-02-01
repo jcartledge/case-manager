@@ -15,48 +15,84 @@ jobs:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5
 
-  talisman:
+  check-deps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: carhartl/talisman-secrets-scan-action@v1.3.0
+      - name: audit-ci
+        run: yarn && yarn check-deps
 
-  audit:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 19
-      - name: Audit package dependencies
-        run: yarn && yarn audit
+      - name: lint
+        run: yarn && yarn lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 19
-      - name: Lint and unit test
-        run: yarn && yarn lint && yarn test
+      - name: test
+        run: yarn && yarn coverage
 
-  publish-docs:
-    needs: [commitlint, talisman, audit, test]
+  build:
+    needs: [commitlint, check-deps, lint, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build
+        run: yarn && yarn build
+
+      - name: save build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+
+  release-please:
+    needs: [build]
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
+
     steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: "@jcartledge/${{github.event.repository"
+
       - uses: actions/checkout@v3
+        if: ${{steps.release.outputs.release_created}}
+
       - uses: actions/setup-node@v3
         with:
           node-version: 19
+          registry-url: "https://registry.npmjs.org"
+        if: ${{steps.release.outputs.release_created}}
+
+      - name: retrieve build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+        if: ${{steps.release.outputs.release_created}}
+
+      - run: yarn && yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{steps.release.outputs.release_created}}
+
       - name: Build docs
-        run: yarn && yarn docs
+        run: yarn docs
+        if: ${{steps.release.outputs.release_created}}
+
       - uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+        if: ${{steps.release.outputs.release_created}}

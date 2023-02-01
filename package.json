@@ -16,6 +16,7 @@
     "@typescript-eslint/parser": "^5.48.2",
     "audit-ci": "^6.6.0",
     "ava": "^5.1.0",
+    "c8": "^7.12.0",
     "eslint": "^8.32.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
@@ -44,9 +45,10 @@
     "*.ts": "lint"
   },
   "scripts": {
-    "audit": "audit-ci",
+    "check-deps": "audit-ci",
     "build": "yarn clean && tsc",
     "clean": "rimraf dist",
+    "coverage": "c8 ava",
     "docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "prepare": "husky install",
