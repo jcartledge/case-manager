@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/jcartledge/case-manager/compare/v1.0.0...v1.0.1) (2023-02-01)
+
+
+### Bug Fixes
+
+* **ci:** yarn publish is not a command ([9ba2402](https://github.com/jcartledge/case-manager/commit/9ba24023ae0ae163502f6737ce020a785c2d2826))
+
 ## 1.0.0 (2023-02-01)
 
 
