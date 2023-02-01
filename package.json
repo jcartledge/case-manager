@@ -1,6 +1,9 @@
 {
-  "name": "case-manager",
+  "name": "@jcartledge/case-manager",
   "version": "1.0.1",
+  "repository": "github:jcartledge/case-manager",
+  "description": "Utilities for converting strings between cases.",
+  "homepage": "https://jcartledge.github.io/case-manager/",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
