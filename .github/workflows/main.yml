@@ -20,30 +20,36 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
-          run_install: true
-      - name: audit-ci
-        run: pnpm check-deps
+          node-version: 19
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check-deps
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
-          run_install: true
-      - name: lint
-        run: pnpm lint
+          node-version: 19
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
-          run_install: true
-      - name: test
-        run: pnpm coverage
+          node-version: 19
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm coverage
 
   build:
     needs: [commitlint, check-deps, lint, test]
@@ -51,13 +57,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
-          run_install: true
-
-      - name: build
-        run: pnpm build
+          node-version: 19
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
 
       - name: save build artifact
         uses: actions/upload-artifact@v3
