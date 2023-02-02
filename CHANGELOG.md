@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/jcartledge/case-manager/compare/v1.0.1...v1.0.2) (2023-02-02)
+
+
+### Bug Fixes
+
+* **ci:** workflow syntax ([84494e3](https://github.com/jcartledge/case-manager/commit/84494e3d934594f5580f498385bdf79e89293b03))
+* package.json ([3e51c21](https://github.com/jcartledge/case-manager/commit/3e51c21436c8e8e0910e89e45c933e2dfb842ea6))
+
 ## [1.0.1](https://github.com/jcartledge/case-manager/compare/v1.0.0...v1.0.1) (2023-02-01)
 
 ### Bug Fixes
