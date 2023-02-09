@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/jcartledge/case-manager/compare/v1.0.3...v1.0.4) (2023-02-09)
+
+
+### Bug Fixes
+
+* **docs:** homepage ([b7dc297](https://github.com/jcartledge/case-manager/commit/b7dc297fba850d2c64cf3d4104cbb9b7982b4309))
+
 ## [1.0.3](https://github.com/jcartledge/case-manager/compare/v1.0.2...v1.0.3) (2023-02-09)
 
 
