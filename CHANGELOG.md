@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/jcartledge/case-manager/compare/v1.0.2...v1.0.3) (2023-02-09)
+
+
+### Bug Fixes
+
+* **ci:** pnpm deps in publish steps ([5ade039](https://github.com/jcartledge/case-manager/commit/5ade039211ac4042d99dc3e78f8b8e2e28a15b13))
+
 ## [1.0.2](https://github.com/jcartledge/case-manager/compare/v1.0.1...v1.0.2) (2023-02-02)
 
 
