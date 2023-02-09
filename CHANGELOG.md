@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/jcartledge/case-manager/compare/v1.0.4...v1.0.5) (2023-02-09)
+
+
+### Bug Fixes
+
+* **ci:** remove redundant script ([793562b](https://github.com/jcartledge/case-manager/commit/793562bc34c604306d70c699b2fb4d032230a602))
+
 ## [1.0.4](https://github.com/jcartledge/case-manager/compare/v1.0.3...v1.0.4) (2023-02-09)
 
 
