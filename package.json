@@ -55,7 +55,6 @@
     "docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "prepare": "husky install",
-    "publish": "npm publish",
     "test": "ava"
   },
   "ava": {
