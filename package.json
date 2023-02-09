@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "repository": "github:jcartledge/case-manager",
   "description": "Simple conditional component for React.",
-  "homepage": "https://jcartledge.github.io/react-conditional/",
+  "homepage": "https://jcartledge.github.io/case-manager/",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
