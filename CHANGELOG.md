@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/jcartledge/case-manager/compare/v1.0.5...v1.0.6) (2023-02-09)
+
+
+### Bug Fixes
+
+* **ci:** script name collision ([f397036](https://github.com/jcartledge/case-manager/commit/f3970368fd88ca6ce4c75c7e7429ca72c4fe3473))
+
 ## [1.0.5](https://github.com/jcartledge/case-manager/compare/v1.0.4...v1.0.5) (2023-02-09)
 
 
