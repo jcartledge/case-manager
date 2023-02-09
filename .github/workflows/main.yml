@@ -94,7 +94,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: "package.json"
+          cache: "pnpm"
           registry-url: "https://registry.npmjs.org"
+        if: ${{steps.release.outputs.release_created}}
+
+      - run: pnpm install --frozen-lockfile
         if: ${{steps.release.outputs.release_created}}
 
       - name: retrieve build artifact
