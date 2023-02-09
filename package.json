@@ -52,7 +52,7 @@
     "build": "pnpm clean && tsc",
     "clean": "rimraf dist",
     "coverage": "c8 ava",
-    "docs": "typedoc --out docs src",
+    "build-docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "prepare": "husky install",
     "test": "ava"

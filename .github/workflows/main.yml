@@ -114,7 +114,7 @@ jobs:
         if: ${{steps.release.outputs.release_created}}
 
       - name: Build docs
-        run: pnpm docs
+        run: pnpm build-docs
         if: ${{steps.release.outputs.release_created}}
 
       - uses: peaceiris/actions-gh-pages@v3
