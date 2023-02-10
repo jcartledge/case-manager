@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5
 
-  check-deps:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,9 +23,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: "package.json"
-          cache: "pnpm"
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm check-deps
+      - run: pnpm audit
 
   lint:
     runs-on: ubuntu-latest
