@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/jcartledge/case-manager/compare/v1.0.6...v1.0.7) (2023-02-10)
+
+
+### Bug Fixes
+
+* **ci:** finish rename ([d7887b9](https://github.com/jcartledge/case-manager/commit/d7887b97ea44bc2901a19538395cfeba3837ac82))
+
 ## [1.0.6](https://github.com/jcartledge/case-manager/compare/v1.0.5...v1.0.6) (2023-02-09)
 
 
