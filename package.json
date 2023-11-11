@@ -21,7 +21,7 @@
     "c8": "8.0.1",
     "eslint": "8.53.0",
     "husky": "8.0.3",
-    "lint-staged": "15.0.2",
+    "lint-staged": "15.1.0",
     "rimraf": "5.0.5",
     "ts-node": "10.9.1",
     "typedoc": "0.25.3",
