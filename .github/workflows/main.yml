@@ -115,7 +115,7 @@ jobs:
         run: pnpm build-docs
         if: ${{steps.release.outputs.release_created}}
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
