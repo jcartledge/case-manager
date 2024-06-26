@@ -14,7 +14,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/node": "20.12.7",
+    "@types/node": "20.14.9",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.8.0",
     "ava": "6.1.2",
@@ -74,6 +74,6 @@
   },
   "packageManager": "pnpm@9.0.6",
   "volta": {
-    "node": "20.12.2"
+    "node": "20.15.0"
   }
 }
