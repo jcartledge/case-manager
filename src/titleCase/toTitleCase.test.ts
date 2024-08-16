@@ -9,3 +9,6 @@ test("from_snake_case", isToTitleCase("From Snake Case"));
 test("from-kebab-case", isToTitleCase("From Kebab Case"));
 test("fromCamelCase", isToTitleCase("From Camel Case"));
 test("FromPascalCase", isToTitleCase("From Pascal Case"));
+test("multiple inputs", (t) => {
+  t.is(toTitleCase("something", "something else"), "Something Something Else")
+})
