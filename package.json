@@ -14,7 +14,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/node": "20.14.15",
+    "@types/node": "20.15.0",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.8.0",
     "ava": "6.1.3",
