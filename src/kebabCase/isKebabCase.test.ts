@@ -5,6 +5,7 @@ import { isKebabCase } from "./isKebabCase";
 const { yes, no } = booleanTitleTestHelpers(isKebabCase);
 
 test("is-kebab-case", yes);
+test("iskebabcase", yes);
 test("IsKebabCase", no);
 test("isKebabCase", no);
 test("is-kebabCase", no);
