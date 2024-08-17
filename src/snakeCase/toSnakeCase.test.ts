@@ -10,5 +10,8 @@ test("from-kebab-case", isToSnakeCase("from_kebab_case"));
 test("fromCamelCase", isToSnakeCase("from_camel_case"));
 test("FromPascalCase", isToSnakeCase("from_pascal_case"));
 test("multiple inputs", (t) => {
-  t.is(toSnakeCase("something", "something else"), "something_something_else" as SnakeCaseString)
-})
+  t.is(
+    toSnakeCase("something", "something else"),
+    "something_something_else" as SnakeCaseString,
+  );
+});

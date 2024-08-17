@@ -10,5 +10,8 @@ test("from_snake_case", toCamelCaseIs("fromSnakeCase"));
 test("from-kebab-case", toCamelCaseIs("fromKebabCase"));
 test("FromPascalCase", toCamelCaseIs("fromPascalCase"));
 test("multiple inputs", (t) => {
-  t.is(toCamelCase("something", "something else"), "somethingSomethingElse" as CamelCaseString)
-})
+  t.is(
+    toCamelCase("something", "something else"),
+    "somethingSomethingElse" as CamelCaseString,
+  );
+});

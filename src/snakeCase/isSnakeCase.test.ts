@@ -12,4 +12,3 @@ test("isSnakeCase", no);
 test("is-snakeCase", no);
 test("is-snake_case", no);
 test("Is snake Case", no);
-

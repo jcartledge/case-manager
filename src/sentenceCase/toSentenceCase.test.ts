@@ -10,5 +10,8 @@ test("from-kebab-case", toSentenceCaseIs("From kebab case"));
 test("fromCamelCase", toSentenceCaseIs("From camel case"));
 test("FromPascalCase", toSentenceCaseIs("From pascal case"));
 test("multiple inputs", (t) => {
-  t.is(toSentenceCase("something", "something else"), "Something something else" as SentenceCaseString)
-})
+  t.is(
+    toSentenceCase("something", "something else"),
+    "Something something else" as SentenceCaseString,
+  );
+});

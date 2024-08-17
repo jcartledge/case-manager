@@ -10,6 +10,8 @@ test("from_snake_case", toPascalCaseIs("FromSnakeCase"));
 test("from-kebab-case", toPascalCaseIs("FromKebabCase"));
 test("fromCamelCase", toPascalCaseIs("FromCamelCase"));
 test("multiple inputs", (t) => {
-  t.is(toPascalCase("something", "something else"), "SomethingSomethingElse" as PascalCaseString)
-})
-
+  t.is(
+    toPascalCase("something", "something else"),
+    "SomethingSomethingElse" as PascalCaseString,
+  );
+});
