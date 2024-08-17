@@ -1,6 +1,7 @@
 import test from "ava";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { toSentenceCase } from "./toSentenceCase";
+import { SentenceCaseString } from ".";
 
 const { is: toSentenceCaseIs } = stringTitleTestHelpers(toSentenceCase);
 
@@ -10,5 +11,5 @@ test("from-kebab-case", toSentenceCaseIs("From kebab case"));
 test("fromCamelCase", toSentenceCaseIs("From camel case"));
 test("FromPascalCase", toSentenceCaseIs("From pascal case"));
 test("multiple inputs", (t) => {
-  t.is(toSentenceCase("something", "something else"), "Something something else")
+  t.is(toSentenceCase("something", "something else"), "Something something else" as SentenceCaseString)
 })

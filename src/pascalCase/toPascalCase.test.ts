@@ -1,6 +1,7 @@
 import test from "ava";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 import { toPascalCase } from "./toPascalCase";
+import { PascalCaseString } from ".";
 
 const { is: toPascalCaseIs } = stringTitleTestHelpers(toPascalCase);
 
@@ -10,6 +11,6 @@ test("from_snake_case", toPascalCaseIs("FromSnakeCase"));
 test("from-kebab-case", toPascalCaseIs("FromKebabCase"));
 test("fromCamelCase", toPascalCaseIs("FromCamelCase"));
 test("multiple inputs", (t) => {
-  t.is(toPascalCase("something", "something else"), "SomethingSomethingElse")
+  t.is(toPascalCase("something", "something else"), "SomethingSomethingElse" as PascalCaseString)
 })
 

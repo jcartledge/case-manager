@@ -1,7 +1,9 @@
 import { ucfirst } from "../common/ucfirst";
+import { TitleCaseString } from ".";
 
-export const toTitleCase = (...input: string[]): string => {
-  return input.join(" ")
+export const toTitleCase = (...input: string[]): TitleCaseString => {
+  return input
+    .join(" ")
     .replace(/[ ]+/g, " ")
     .replace(/([A-Z])/g, " $1")
     .replace(/^ /, "")
@@ -9,5 +11,5 @@ export const toTitleCase = (...input: string[]): string => {
     .toLowerCase()
     .split(" ")
     .map(ucfirst)
-    .join(" ");
-};
+    .join(" ") as TitleCaseString
+}

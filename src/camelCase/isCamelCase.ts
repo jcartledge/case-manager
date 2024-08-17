@@ -1,2 +1,4 @@
-export const isCamelCase = (input: string): boolean =>
+import { CamelCaseString } from ".";
+
+export const isCamelCase = (input: string): input is CamelCaseString =>
   /^[a-z]+([A-Z][a-z]+)*$/.test(input);

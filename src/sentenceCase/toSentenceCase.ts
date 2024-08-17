@@ -1,6 +1,7 @@
+import { SentenceCaseString } from ".";
 import { ucfirst } from "../common/ucfirst";
 
-export const toSentenceCase = (...input: string[]): string => {
+export const toSentenceCase = (...input: string[]): SentenceCaseString => {
   return ucfirst(
     input.join(" ")
       .replace(/[ ]+/g, " ")
@@ -8,5 +9,5 @@ export const toSentenceCase = (...input: string[]): string => {
       .replace(/^ /, "")
       .replace(/[_\- ]+/g, " ")
       .toLowerCase()
-  );
+  ) as SentenceCaseString;
 };

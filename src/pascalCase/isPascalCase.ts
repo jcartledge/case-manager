@@ -1,2 +1,4 @@
-export const isPascalCase = (input: string): boolean =>
+import { PascalCaseString } from ".";
+
+export const isPascalCase = (input: string): input is PascalCaseString =>
   /^([A-Z][a-z]+)+$/.test(input);
