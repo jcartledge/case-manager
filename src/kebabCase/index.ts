@@ -1,4 +1,4 @@
-import { Brand } from "../common/types/brand";
+import { Brand } from "../common/types";
 
 export type KebabCaseString = Brand<string, '#KebabCase'>
 export { isKebabCase } from "./isKebabCase";

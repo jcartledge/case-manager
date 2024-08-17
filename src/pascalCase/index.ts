@@ -1,4 +1,4 @@
-import { Brand } from "../common/types/brand";
+import { Brand } from "../common/types";
 
 export type PascalCaseString = Brand<string, '#PascalCase'>
 export { isPascalCase } from "./isPascalCase";

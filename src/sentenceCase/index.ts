@@ -1,4 +1,4 @@
-import { Brand } from "../common/types/brand";
+import { Brand } from "../common/types";
 
 export type SentenceCaseString = Brand<string, '#SentenceCase'>
 export { isSentenceCase } from "./isSentenceCase";

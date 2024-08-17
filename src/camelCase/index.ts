@@ -1,4 +1,4 @@
-import { Brand } from "../common/types/brand";
+import { Brand } from "../common/types";
 
 export type CamelCaseString = Brand<string, '#CamelCase'>
 export { toCamelCase } from './toCamelCase'
