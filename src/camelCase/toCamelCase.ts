@@ -1,6 +1,5 @@
 import { CamelCaseString } from ".";
-import { lcfirst } from "../common/lcfirst";
-import { ucfirst } from "../common/ucfirst";
+import { lcfirst, ucfirst } from "../common/string";
 
 export const toCamelCase = (...input: string[]): CamelCaseString =>
   lcfirst(input.join(" ").replace(/[_-]/g, " ").split(" ").map(ucfirst).join("")) as CamelCaseString;

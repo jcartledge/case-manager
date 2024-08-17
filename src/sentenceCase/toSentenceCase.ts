@@ -1,5 +1,5 @@
 import { SentenceCaseString } from ".";
-import { ucfirst } from "../common/ucfirst";
+import { ucfirst } from "../common/string";
 
 export const toSentenceCase = (...input: string[]): SentenceCaseString => {
   return ucfirst(

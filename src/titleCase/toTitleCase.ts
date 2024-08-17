@@ -1,4 +1,4 @@
-import { ucfirst } from "../common/ucfirst";
+import { ucfirst } from "../common/string";
 import { TitleCaseString } from ".";
 
 export const toTitleCase = (...input: string[]): TitleCaseString => {
