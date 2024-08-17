@@ -3,6 +3,9 @@ import { ucfirst } from "../common/string";
 
 export type TitleCaseString = Brand<string, '#TitleCase'>
 
+export const isTitleCase = (input: string): input is TitleCaseString =>
+  /^([A-Z][a-z]*)( [A-Z][a-z]*)*$/.test(input);
+
 export const toTitleCase = (...input: string[]): TitleCaseString => {
   return input
     .join(" ")

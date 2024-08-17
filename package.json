@@ -62,7 +62,7 @@
     "build-docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "prepare": "husky install",
-    "test": "c8 ava"
+    "test": "ava --watch"
   },
   "ava": {
     "extensions": [
