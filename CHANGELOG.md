@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/jcartledge/case-manager/compare/v1.1.0...v1.2.0) (2024-08-17)
+
+
+### Features
+
+* types ([3fa5328](https://github.com/jcartledge/case-manager/commit/3fa532880d8baf4f8a10d20400f838db0ea0856d))
+
 ## [1.1.0](https://github.com/jcartledge/case-manager/compare/v1.0.0...v1.1.0) (2024-08-16)
 
 
