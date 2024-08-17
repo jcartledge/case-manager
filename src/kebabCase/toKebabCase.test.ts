@@ -1,7 +1,6 @@
 import test from "ava";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { toKebabCase } from "./toKebabCase";
-import { KebabCaseString } from ".";
+import { toKebabCase, KebabCaseString } from "..";
 
 const { is: toKebabCaseIs } = stringTitleTestHelpers(toKebabCase);
 

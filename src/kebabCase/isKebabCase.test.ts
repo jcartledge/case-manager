@@ -1,6 +1,6 @@
 import test from "ava";
 import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { isKebabCase } from "./isKebabCase";
+import { isKebabCase } from "..";
 
 const { yes, no } = booleanTitleTestHelpers(isKebabCase);
 

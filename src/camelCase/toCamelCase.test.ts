@@ -1,7 +1,6 @@
 import test from "ava";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { toCamelCase } from "./toCamelCase";
-import { CamelCaseString } from ".";
+import { toCamelCase, CamelCaseString } from "..";
 
 const { is: toCamelCaseIs } = stringTitleTestHelpers(toCamelCase);
 

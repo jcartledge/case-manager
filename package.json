@@ -58,11 +58,11 @@
   "scripts": {
     "build": "pnpm clean && tsc",
     "clean": "rimraf dist",
-    "coverage": "c8 ava",
+    "coverage": "c8 --src=src --exclude=**/types --all --100 ava",
     "build-docs": "typedoc --out docs src",
     "lint": "eslint src && tsc --noEmit",
     "prepare": "husky install",
-    "test": "ava"
+    "test": "c8 ava"
   },
   "ava": {
     "extensions": [

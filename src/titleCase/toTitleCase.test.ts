@@ -1,6 +1,6 @@
 import test from "ava";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { TitleCaseString, toTitleCase } from ".";
+import { TitleCaseString, toTitleCase } from "..";
 
 const { is: isToTitleCase } = stringTitleTestHelpers(toTitleCase);
 

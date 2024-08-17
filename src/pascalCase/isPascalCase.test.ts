@@ -1,6 +1,6 @@
 import test from "ava";
 import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { isPascalCase } from "./isPascalCase";
+import { isPascalCase } from "..";
 
 const { yes, no } = booleanTitleTestHelpers(isPascalCase);
 
