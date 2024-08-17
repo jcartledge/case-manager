@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/jcartledge/case-manager/compare/v1.2.0...v1.3.0) (2024-08-17)
+
+
+### Features
+
+* isSnakeCase ([2fd9491](https://github.com/jcartledge/case-manager/commit/2fd9491aa6568a922b60eaab59262a273f5bde1c))
+* isTitleCase ([90d8631](https://github.com/jcartledge/case-manager/commit/90d8631d03e067cfaaf50a338c27beafd7d635cc))
+
 ## [1.2.0](https://github.com/jcartledge/case-manager/compare/v1.1.0...v1.2.0) (2024-08-17)
 
 
