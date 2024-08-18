@@ -1,3 +1,4 @@
+import { casedStringBuilder } from "../common/casedStringBuilder";
 import { Brand } from "../common/types";
 
 export type SnakeCaseString = Brand<string, "#SnakeCase">;
@@ -14,3 +15,5 @@ export const toSnakeCase = (...input: string[]): SnakeCaseString => {
     .replace(/[_-]+/g, "_")
     .toLowerCase() as SnakeCaseString;
 };
+
+export const snakeCaseStringBuilder = casedStringBuilder(toSnakeCase);

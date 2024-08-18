@@ -1,3 +1,4 @@
+import { casedStringBuilder } from "../common/casedStringBuilder";
 import { ucfirst } from "../common/string";
 import { Brand } from "../common/types";
 
@@ -14,3 +15,5 @@ export const toPascalCase = (...input: string[]): PascalCaseString => {
     .map(ucfirst)
     .join("") as PascalCaseString;
 };
+
+export const pascalCaseStringBuilder = casedStringBuilder(toPascalCase);

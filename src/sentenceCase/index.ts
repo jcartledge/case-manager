@@ -1,3 +1,4 @@
+import { casedStringBuilder } from "../common/casedStringBuilder";
 import { ucfirst } from "../common/string";
 import { Brand } from "../common/types";
 
@@ -17,3 +18,5 @@ export const toSentenceCase = (...input: string[]): SentenceCaseString => {
       .toLowerCase(),
   ) as SentenceCaseString;
 };
+
+export const sentenceCaseStringBuilder = casedStringBuilder(toSentenceCase);

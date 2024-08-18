@@ -1,3 +1,4 @@
+import { casedStringBuilder } from "../common/casedStringBuilder";
 import { ucfirst } from "../common/string";
 import { Brand } from "../common/types";
 
@@ -18,3 +19,5 @@ export const toTitleCase = (...input: string[]): TitleCaseString => {
     .map(ucfirst)
     .join(" ") as TitleCaseString;
 };
+
+export const titleCaseStringBuilder = casedStringBuilder(toTitleCase);

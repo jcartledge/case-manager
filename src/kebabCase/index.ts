@@ -1,3 +1,4 @@
+import { casedStringBuilder } from "../common/casedStringBuilder";
 import { Brand } from "../common/types";
 
 export type KebabCaseString = Brand<string, "#KebabCase">;
@@ -14,3 +15,5 @@ export const toKebabCase = (...input: string[]): KebabCaseString => {
     .replace(/[_-]+/g, "-")
     .toLowerCase() as KebabCaseString;
 };
+
+export const kebabCaseStringBuilder = casedStringBuilder(toKebabCase);
