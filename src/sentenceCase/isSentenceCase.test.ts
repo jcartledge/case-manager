@@ -13,3 +13,4 @@ test("Is sENTence case", no);
 test("Is Sentence Case", no);
 test("is-sentence_case", no);
 test("isSentenceCase", no);
+test("empty string", (t) => t.false(isSentenceCase("")));

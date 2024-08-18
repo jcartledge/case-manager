@@ -12,3 +12,4 @@ test("is-camel_case", no);
 test("IsCamelCase", no);
 test("IsCAMelCase", no);
 test("ISCamelCase", no);
+test("empty string", (t) => t.false(isCamelCase("")));

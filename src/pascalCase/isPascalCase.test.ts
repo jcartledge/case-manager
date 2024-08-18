@@ -12,3 +12,4 @@ test("is-pascal_case", no);
 test("isPascalCase", no);
 test("IsPAScalCase", no);
 test("ISPascalCase", no);
+test("empty string", (t) => t.false(isPascalCase("")));

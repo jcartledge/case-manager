@@ -13,3 +13,4 @@ test("Is title case", no);
 test("Is title Case", no);
 test("is-title_case", no);
 test("isTitleCase", no);
+test("empty string", (t) => t.false(isTitleCase("")));

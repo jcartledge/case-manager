@@ -12,3 +12,4 @@ test("isKebabCase", no);
 test("is-kebabCase", no);
 test("is-kebab_case", no);
 test("Is kebab Case", no);
+test("empty string", (t) => t.false(isKebabCase("")));
