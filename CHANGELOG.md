@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/jcartledge/case-manager/compare/v1.3.0...v1.4.0) (2024-08-18)
+
+
+### Features
+
+* cased string builders ([b6fc828](https://github.com/jcartledge/case-manager/commit/b6fc8285a886317a45488fe227d9befef7b4e631))
+
 ## [1.3.0](https://github.com/jcartledge/case-manager/compare/v1.2.0...v1.3.0) (2024-08-17)
 
 
