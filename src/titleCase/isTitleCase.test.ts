@@ -1,6 +1,7 @@
 import test from "ava";
-import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
+
 import { isTitleCase } from "..";
+import { booleanTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
 
 const { yes, no } = booleanTitleTestHelpers(isTitleCase);
 

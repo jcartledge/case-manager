@@ -1,5 +1,5 @@
-import { Brand } from "../common/types";
 import { ucfirst } from "../common/string";
+import { Brand } from "../common/types";
 
 export type PascalCaseString = Brand<string, "#PascalCase">;
 

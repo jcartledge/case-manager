@@ -1,6 +1,7 @@
 import test from "ava";
+
+import { SnakeCaseString, toSnakeCase } from "..";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { toSnakeCase, SnakeCaseString } from "..";
 
 const { is: isToSnakeCase } = stringTitleTestHelpers(toSnakeCase);
 

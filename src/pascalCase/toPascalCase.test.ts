@@ -1,6 +1,7 @@
 import test from "ava";
+
+import { PascalCaseString, toPascalCase } from "..";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { toPascalCase, PascalCaseString } from "..";
 
 const { is: toPascalCaseIs } = stringTitleTestHelpers(toPascalCase);
 

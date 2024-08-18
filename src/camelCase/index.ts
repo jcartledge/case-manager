@@ -1,5 +1,5 @@
-import { Brand } from "../common/types";
 import { lcfirst, ucfirst } from "../common/string";
+import { Brand } from "../common/types";
 
 export type CamelCaseString = Brand<string, "#CamelCase">;
 

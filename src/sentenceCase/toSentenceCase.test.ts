@@ -1,6 +1,7 @@
 import test from "ava";
+
+import { SentenceCaseString, toSentenceCase } from "..";
 import { stringTitleTestHelpers } from "../common/testHelpers/booleanTitleTestHelpers";
-import { toSentenceCase, SentenceCaseString } from "..";
 
 const { is: toSentenceCaseIs } = stringTitleTestHelpers(toSentenceCase);
 
