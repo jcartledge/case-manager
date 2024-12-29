@@ -68,7 +68,7 @@
       "ts-node/register"
     ]
   },
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.2",
   "volta": {
     "node": "22.12.0"
   }
